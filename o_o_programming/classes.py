@@ -1,12 +1,15 @@
 # chapter 9
 def sample():
     pass
+
+
 class Dog:
-    # state
-    breed = ''
-    age = ''
-    name = ''
-    color = ''
+    def __init__(self, breed, age, name, color):
+        # state
+        self.breed = breed
+        self.age = age
+        self.name = name
+        self.color = color
 
     # behavior
     # self key word is used to show that functions and variables are belong to class
@@ -14,21 +17,15 @@ class Dog:
         print('Dog is barking')
 
     def run(self):
-        print(f'{self.name} is running fast....')
+        print(f'dog named {self.name} is running fast and he is {self.age} years old and he is {self.color} color....')
+
 
 # creating the object from the Class(model)
 # creating the instances from the class - INSTANTIATIONS
-dog1 = Dog()
-dog1.name = 'Max'
 
-dog2 = Dog()
-dog2.name = 'Jack'
 
-dog3 = Dog()
-dog3.name = 'Sam'
+dog3 = Dog('Gray', 10, 'Sam', 'Gray')
 
-print('************ Behavior of dog: dogs are running ************')
-dog1.run()
-dog2.run()
+print('************ Behavior of a dog ************')
+
 dog3.run()
-
